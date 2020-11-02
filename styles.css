@@ -1,0 +1,152 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+:root {
+    --red-color: #9C0000;
+    --blue-color: #2D2D9E;
+    --gold-color: goldenrod;
+}
+
+body {
+    margin: 5vmin;
+    height: 100vh; 
+    text-align: center;
+
+}
+
+div {
+    display: flex;
+    justify-content: center;
+}
+
+#game-play {
+    height: 60vmin;
+    background-color: gray;
+    border-radius: 1vmin;
+    color: white;
+    vertical-align: middle;
+
+}
+table {
+    height: 54vmin;
+    width: 54vmin;
+    border-color: black;
+    border: .1vmin;
+    padding-top: 7vmin;
+}
+
+td {
+    height: 15vmin;
+    width: 15vmin;
+    background-color: lightgray;
+    border-radius: 1vmin;
+    border-color: darkgray;
+    border-style: solid;
+}
+
+td:hover {
+    box-shadow: darkgray;
+}
+
+
+#joe-box {
+    width: 20%;
+    background-color: var(--blue-color);
+    margin: 0 auto;
+    border-radius: 1vmin;
+    letter-spacing: .5vmin;
+    font-size:4vmin;
+
+
+
+}
+
+#donald-box {
+    width: 20%;
+    background-color: var(--red-color);
+    margin: 0 auto;
+    border-radius: 1vmin;
+    letter-spacing: .5vmin;
+    font-size:4vmin;
+
+
+
+
+}
+
+#game-board {
+    width: 60%;
+    background-color: white;
+    border-radius: 1vmin;
+    display: grid;
+}
+
+
+#game-results {
+    height: 25vmin;
+    background-color: black;
+}
+
+#joe-score {
+    width: 20%;
+    background-color: var(--blue-color);
+    margin: 0 auto;
+    display: block;
+    border-radius: 1vmin;
+
+
+
+}
+
+#donald-score {
+    width: 20%;
+    background-color: var(--red-color);
+    margin: 0 auto;
+    display: block;
+    border-radius: 1vmin;
+
+
+
+}
+
+#result-message {
+    width: 60%;
+    background-color: white;
+    margin: 0 auto;
+    display: block;
+    border-radius: 1vmin;
+    
+
+
+
+}
+
+button {
+    display: inline;
+    font-size:3vmin;
+    font-weight: bold;
+    width: 25vmin;
+    height: 7vmin;
+    align-items: center;
+    margin: 0 auto;
+    border: .4vmin solid black;
+    color: black;
+    border-radius: 1vmin;
+    outline: none;
+    
+}
+
+button:hover {
+
+}
+
+#play-again{
+    background-color: var(--gold-color);
+}
+
+#reset{
+    background-color: gray;
+
+}

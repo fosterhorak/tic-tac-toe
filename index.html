@@ -3,19 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TIC-TAC-TOE: DONALD vs JOE</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="main.js"></script>
+    
 </head>
 <body>
-    <head>
+    <header>
         <h1>TIC-TAC-TOE</h1>
-        <H2>DONALD VS JOE</H2>
-    </head>
-    <div id = "joe-box"></div>
-    <div id = "game-board"></div>
-    <div id = "donald-box"></div>
-    <div id = "joe-score"></div>
-    <div id = "result"></div>
-    <div id = "donald-score"></div>
-    
+        <H2>*DONALD vs JOE*</H2>
+    </header>
+    <main>
+        <div id = "game-play">
+            <div id = "joe-box">
+                <h3>JOE</h3>
+            </div>
+            <div id = "game-board">
+                <table>
+                    <tr>
+                        <td id = box0><div></div></td>
+                        <td id = box1><div></div></td>
+                        <td id = box2><div></div></td>
+                    </tr>
+                    <tr>
+                        <td id = box3><div></div></td>
+                        <td id = box4><div></div></td>
+                        <td id = box5><div></div></td>
+                    </tr>
+                    <tr>
+                        <td id = box6><div></div></td>
+                        <td id = box7><div></div></td>
+                        <td id = box8><div></div></td>
+                    </tr>
+                </table>
+            </div>
+            <div id = "donald-box">
+                <h3>DONALD</h3>
+            </div>
+        </div>
+        <div id = "game-results">
+            <div id = "joe-score">
+                <h3>SCORE</h3>
+                <h1>0</h1>
+            </div>
+            <div id = "result-message">
+                <h1>X WINS!</h1>
+                <div class = "buttons">
+                    <button id = "play-again">PLAY AGAIN</button>
+                    <button id = "reset">RESET</button>
+                </div>
+            </div>
+            <div id = "donald-score">
+                <h3>SCORE</h3>
+                <h1>0</h1>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

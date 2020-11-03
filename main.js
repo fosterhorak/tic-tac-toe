@@ -26,12 +26,12 @@ const winningCombos = [
     [2, 5, 8],
     [0, 4, 8],
     [2, 4, 6],
-]
+];
 
 const players = {
     '1': "url('https://media2.giphy.com/media/3o6ZsVbs2GzgKNvVpS/giphy.gif?cid=ecf05e47qp8333q5ikp2yjlyb1dts6d8qn9soocmj9cq2szy&rid=giphy.gif')",
     '-1': "url('https://media2.giphy.com/media/rWgLOxrdNNDzUXaQnd/giphy.gif?cid=ecf05e47vjskno3mgni8p3paagefb10yz3ysrjw8200931p6&rid=giphy.gif')",
-    'null': 'white';
+    'null': 'white',
 }
 
 /*----- app's state (variables) -----*/
@@ -58,46 +58,75 @@ initialize();
 
 
 function initialize() {
-//set state variables
+    //set state variables
     //game goard
-    //determine who's turn it is
+    gameBoard = [null, null, null, null, null, null, null, null, null];
+    //determine who's turn it is (add a random chooser??)
+    turn = 1;
     //winner
-
-//render
+    winner = null;
+    //render
+    render();
 
 }
 
 function render() {
     //fill the grid appropriately
+    gameBoard.forEach(function(box, idx) {
+        boxes[idx].style.background = players[box];
+    });
     //update message
-        //if there's a winner
-            //update scores
-        //if it's a ite
-        //if it's someones' turn
+        //if it's a tie
+    if (winner === 'Tie') {
+        message.innerHTML = "It's a Tie!";
+    }
+    //if there's a winner (+ update scores)
+    else if (winner) {
+        message.innerHTML = `Congrats ${players[winner].toUpperCase()}!`;
+    }
+    //if it's someones' turn
+    else {
+        message.innerHTML = `${lookup[turn].toUpperCase()}'s Turn`;
+    }    
 }
 
 //function for clicking the board (moves)
 function handleMove() {
     //get box index
+    const idx = parseInt(evt.target.id.replace('box', ''));
     //if available continue, if not - return
+    if (gameBoard[idx] || winner) return;
     //update board
+    gameBoard[idx] = turn;
     //check for winner
+    winner = checkWinner();
     //update turn
+    turn *= -1;
     //render
+    render();
 }
 
 
 //fuction for clicking reset
 function reset(){
-
+    initialize();
 }
 
 //function for clicking play again
 function playAgain() {
-
+    initialize();
 }
 
 //function for checking for a winner
 function checkWinner() {
-
+    if (Math.abs(gameBoard[0] + gameBoard[1] + gameBoard[2]) === 3) return gameBoard[0];
+    if (Math.abs(gameBoard[3] + gameBoard[4] + gameBoard[5]) === 3) return gameBoard[3];
+    if (Math.abs(gameBoard[6] + gameBoard[7] + gameBoard[8]) === 3) return gameBoard[6];
+    if (Math.abs(gameBoard[0] + gameBoard[3] + gameBoard[6]) === 3) return gameBoard[0];
+    if (Math.abs(gameBoard[1] + gameBoard[4] + gameBoard[7]) === 3) return gameBoard[1];
+    if (Math.abs(gameBoard[2] + gameBoard[5] + gameBoard[8]) === 3) return gameBoard[2];
+    if (Math.abs(gameBoard[0] + gameBoard[4] + gameBoard[8]) === 3) return gameBoard[0];
+    if (Math.abs(gameBoard[2] + gameBoard[4] + gameBoard[6]) === 3) return gameBoard[2];
+    if (gameBoard.includes(null)) return null;
+    return 'Tie';
 }

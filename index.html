@@ -3,61 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIC-TAC-TOE: DONALD vs JOE</title>
+    <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="main.js"></script>
-    
 </head>
 <body>
-    <header>
-        <h1>TIC-TAC-TOE</h1>
-        <H2>*DONALD vs JOE*</H2>
-    </header>
-    <main>
-        <div id = "game-play">
-            <div id = "joe-box">
-                <h3>JOE</h3>
-            </div>
-            <div id = "game-board">
-                <table>
-                    <tr>
-                        <td id = box0><div></div></td>
-                        <td id = box1><div></div></td>
-                        <td id = box2><div></div></td>
-                    </tr>
-                    <tr>
-                        <td id = box3><div></div></td>
-                        <td id = box4><div></div></td>
-                        <td id = box5><div></div></td>
-                    </tr>
-                    <tr>
-                        <td id = box6><div></div></td>
-                        <td id = box7><div></div></td>
-                        <td id = box8><div></div></td>
-                    </tr>
-                </table>
-            </div>
-            <div id = "donald-box">
-                <h3>DONALD</h3>
-            </div>
+    <div id='container'>
+        <h1></h1>
+        <div id='board'>
+            <div class="box" id="0"></div>
+            <div class="box" id="1"></div>
+            <div class="box" id="2"></div>
+            <div class="box" id="3"></div>
+            <div class="box" id="4"></div>
+            <div class="box" id="5"></div>
+            <div class="box" id="6"></div>
+            <div class="box" id="7"></div>
+            <div class="box" id="8"></div>
         </div>
-        <div id = "game-results">
-            <div id = "joe-score">
-                <h3>SCORE</h3>
-                <h1>0</h1>
-            </div>
-            <div>
-                <h1 id = "result-message"></h1>
-                <div class = "buttons">
-                    <button id = "play-again">PLAY AGAIN</button>
-                    <button id = "reset">RESET</button>
-                </div>
-            </div>
-            <div id = "donald-score">
-                <h3>SCORE</h3>
-                <h1>0</h1>
-            </div>
-        </div>
-    </main>
+        <button>Reset</button>
+    </div>
 </body>
 </html>

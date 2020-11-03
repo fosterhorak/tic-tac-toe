@@ -23,7 +23,7 @@ div {
 
 #game-play {
     height: 60vmin;
-    background-color: gray;
+    /* background-color: grey; */
     border-radius: 1vmin;
     color: white;
     vertical-align: middle;
@@ -40,7 +40,7 @@ table {
 td {
     height: 15vmin;
     width: 15vmin;
-    background-color: lightgray;
+    background-color: white;
     border-radius: 1vmin;
     border-color: darkgray;
     border-style: solid;
@@ -78,7 +78,7 @@ td:hover {
 
 #game-board {
     width: 60%;
-    background-color: white;
+    /* background-color: white; */
     border-radius: 1vmin;
     display: grid;
 }
@@ -86,12 +86,12 @@ td:hover {
 
 #game-results {
     height: 25vmin;
-    background-color: black;
+    /* background-color: black; */
 }
 
 #joe-score {
     width: 20%;
-    background-color: var(--blue-color);
+    /* background-color: var(--blue-color); */
     margin: 0 auto;
     display: block;
     border-radius: 1vmin;
@@ -102,7 +102,7 @@ td:hover {
 
 #donald-score {
     width: 20%;
-    background-color: var(--red-color);
+    /* background-color: var(--red-color); */
     margin: 0 auto;
     display: block;
     border-radius: 1vmin;
@@ -113,7 +113,7 @@ td:hover {
 
 #result-message {
     width: 60%;
-    background-color: white;
+    /* background-color: white; */
     margin: 0 auto;
     display: block;
     border-radius: 1vmin;
